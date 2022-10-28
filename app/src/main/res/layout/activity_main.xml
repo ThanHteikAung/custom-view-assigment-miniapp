@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.Material3.Button.IconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_baseline_keyboard_arrow_left_black_24dp"
+        app:iconSize="@dimen/margin_xlarge"
+        app:iconTint="@color/black"
+        android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnBack"
+        android:layout_toEndOf="@id/btnBack"
+        android:text="@string/txt_appbar"
+        android:textColor="@color/colorSecondary"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold" />
+
+    <com.padc.customviewassigment.views.components.RoundedCornerImageView
+        android:id="@+id/btnProgress"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:text="@string/txt_progress"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:cornerRadius="@dimen/margin_xlarge"
+        app:roundedColor="@color/colorAccent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create additional pages"
+        android:layout_below="@id/btnBack"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        android:layout_alignStart="@id/btnBack"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCurrentDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="03 days | Dec 18,2019"
+        android:layout_below="@id/tvTitle"
+        android:layout_alignStart="@id/btnBack"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvCurrentDate"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_left_rounded_corner">
+
+    </FrameLayout>
+</RelativeLayout>
