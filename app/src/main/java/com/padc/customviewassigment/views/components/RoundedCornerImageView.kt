@@ -3,10 +3,8 @@ package com.padc.customviewassigment.views.components
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
-import android.view.View
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.withStyledAttributes
-import androidx.core.graphics.blue
 import com.padc.customviewassigment.R
 
 class RoundedCornerImageView @JvmOverloads constructor(
@@ -19,32 +17,22 @@ class RoundedCornerImageView @JvmOverloads constructor(
 
     private var roundedColor = Color.YELLOW
 
-    private var paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        style = Paint.Style.FILL
-        textAlign = Paint.Align.CENTER
-        color = Color.BLUE
-        textSize = 55.0f
-    }
-
     init {
         context.withStyledAttributes(attrs, R.styleable.RoundedCornerImageView){
+            //take text view of radius entry value
             cornerRadius = getDimension(R.styleable.RoundedCornerImageView_cornerRadius,0f)
+
+            //take text view of color entry value
             roundedColor = getColor(R.styleable.RoundedCornerImageView_roundedColor,0)
         }
     }
 
     override fun onDraw(canvas: Canvas?) {
         val rectangle = RectF(0f,0f,width.toFloat(),height.toFloat())
-        path.addRoundRect(rectangle,cornerRadius,cornerRadius,Path.Direction.CCW)
-        paint.color = roundedColor
-        canvas?.drawPath(path,paint)
-        //drawBackground(canvas)
-        //canvas?.drawCircle(50.0f,50.0f,cornerRadius,paint)
+        path.addRoundRect(rectangle,cornerRadius,cornerRadius,Path.Direction.CCW) //draw
+        paint.color = roundedColor    //dynamic change color depended on Text view entry value
+        canvas?.drawPath(path,paint)  // draw rectangle text view on canvas
         super.onDraw(canvas)
     }
-
-    /*private fun drawBackground(canvas: Canvas?){
-        paint.color = roundedColor
-    }*/
 
 }

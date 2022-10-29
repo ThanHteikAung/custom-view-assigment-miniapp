@@ -70,5 +70,11 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/background_left_rounded_corner">
 
+        <com.padc.customviewassigment.views.components.RoundedProfileImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/profile_img"
+            app:strokeColor="@color/colorAccent"
+            />
     </FrameLayout>
 </RelativeLayout>

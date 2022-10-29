@@ -4,4 +4,8 @@
         <attr name="cornerRadius" format="dimension"/>
         <attr name="roundedColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="RoundedProfileImageView">
+        <attr name="strokeColor" format="color"/>
+    </declare-styleable>
 </resources>
