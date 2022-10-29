@@ -11,10 +11,10 @@
         style="@style/Widget.Material3.Button.IconButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium_2"
         app:icon="@drawable/ic_baseline_keyboard_arrow_left_black_24dp"
         app:iconSize="@dimen/margin_xlarge"
-        app:iconTint="@color/black"
-        android:layout_marginLeft="@dimen/margin_medium_2"/>
+        app:iconTint="@color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvAppbarTitle"
@@ -31,50 +31,49 @@
         android:id="@+id/btnProgress"
         android:layout_width="140dp"
         android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_3"
+        android:gravity="center"
         android:text="@string/txt_progress"
         android:textColor="@color/white"
-        android:gravity="center"
         app:cornerRadius="@dimen/margin_xlarge"
-        app:roundedColor="@color/colorAccent"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/margin_medium_3"/>
+        app:roundedColor="@color/colorAccent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
+        android:id="@+id/tvCreateTitle"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Create additional pages"
         android:layout_below="@id/btnBack"
-        android:textSize="@dimen/text_title"
+        android:layout_alignStart="@id/btnBack"
+        android:text="@string/text_create_additional_pages"
         android:textColor="@color/colorTextPrimary"
-        android:textStyle="bold"
-        android:layout_alignStart="@id/btnBack"/>
+        android:textSize="@dimen/text_heading_2x"
+        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvCurrentDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="03 days | Dec 18,2019"
-        android:layout_below="@id/tvTitle"
+        android:layout_below="@id/tvCreateTitle"
         android:layout_alignStart="@id/btnBack"
         android:layout_marginTop="@dimen/margin_medium"
+        android:text="03 days | Dec 18,2019"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="@dimen/text_regular_2x"/>
+        android:textSize="@dimen/text_regular_2x" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tvCurrentDate"
-        android:layout_marginTop="@dimen/margin_medium_2"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
         android:background="@drawable/background_left_rounded_corner">
 
-        <com.padc.customviewassigment.views.components.RoundedProfileImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/profile_img"
-            app:strokeColor="@color/colorAccent"
-            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     </FrameLayout>
 </RelativeLayout>
