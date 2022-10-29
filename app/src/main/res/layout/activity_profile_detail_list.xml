@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable = "false"
+    app:behavior_peekHeight = "@dimen/margin_small_n"
+    android:background="@color/colorSecondaryTransparency"
+    style="?attr/bottomSheetStyle"
+    tools:context=".activities.ProfileDetailListActivity">
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/background_rounded"
+        android:src="@drawable/ic_baseline_close_black_24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3"/>
+
+    <com.padc.customviewassigment.views.components.RoundedProfileImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:elevation="9dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_img"
+        app:strokeColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/background_left_right_rounded_corner">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCloseTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Closed tasks"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginLeft="@dimen/margin_medium_3"
+            android:textColor="@color/colorTextSecondary"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCloseTasksNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="361"
+            android:layout_marginLeft="@dimen/margin_xxlarge"
+            android:layout_below="@id/tvCloseTasks"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenTasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open tasks"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorTextSecondary"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOpenTasksNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_xxlarge"
+            android:layout_below="@id/tvOpenTasks"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCloseTasksNo"
+            android:layout_centerHorizontal="true"
+            android:text="Zachary Butler"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_heading_1x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:text="UI Designer"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/tvJob"
+            android:layout_alignLeft="@id/tvCloseTasks"
+            android:background="@drawable/background_rounded_stoke"
+            android:src="@drawable/ic_baseline_share_green_light_24dp" />
+
+        <com.padc.customviewassigment.views.components.RoundedCornerImageView
+            android:id="@+id/btnMessage"
+            android:layout_width="190dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/tvJob"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/btnShare"
+            android:gravity="center"
+            android:text="@string/txt_message"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_regular_2x"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/margin_xlarge"
+            app:roundedColor="@color/colorGreenDark" />
+
+        <ImageButton
+            android:id="@+id/btnContact"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/tvJob"
+            android:background="@drawable/background_rounded_stoke"
+            android:layout_alignRight="@id/tvOpenTasks"
+            android:src="@drawable/ic_baseline_content_paste_green_light_24dp"/>
+        
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabProfileDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnShare"
+            app:tabIndicatorColor = "@color/colorGreenLight"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/colorTextPrimary"
+            app:tabTextColor="@color/colorTextSecondary"/>
+
+        <View
+            android:layout_below="@id/tabProfileDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_color_secondary_light"/>
+
+        <include
+            android:id="@+id/vpProgressDetailCard"
+            layout="@layout/viewpod_progress_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabProfileDetail"
+            android:layout_alignStart="@id/tvCloseTasks"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_colorSecondaryLight.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_color_secondary.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_color_secondary_light.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_left_right_rounded_corner.xml" value="0.124" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_left_rounded_corner.xml" value="0.187" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_progress.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_rounded.xml" value="0.187" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_rounded_corner.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_rounded_stoke.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/background_secondaryText_color.xml" value="0.187" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/drawable/gradient_progress_detail.xml" value="0.187" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/layout/activity_profile_detail_list.xml" value="0.25416666666666665" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/layout/view_item_progress_card.xml" value="0.253125" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/layout/viewholder_profile_image.xml" value="0.253125" />
         <entry key="..\:/THA/Data (D)/PADC/module16/app/src/main/res/layout/viewpod_progress_card.xml" value="0.253125" />

@@ -18,4 +18,7 @@
     <color name="colorSecondaryLight">#F0F4FD</color>
     <color name="outerColorProgress">#FACEC2</color>
     <color name="colorProgress">#F35B2E</color>
+    <color name="colorGreenLight">#D9F4ED</color>
+    <color name="colorGreenDark">#2CC09C</color>
+    <color name="colorSecondaryTransparency">#4D33354E</color>
 </resources>

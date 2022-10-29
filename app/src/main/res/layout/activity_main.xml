@@ -1,124 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBack"
-        style="@style/Widget.Material3.Button.IconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_medium_2"
-        app:icon="@drawable/ic_baseline_keyboard_arrow_left_black_24dp"
-        app:iconSize="@dimen/margin_xlarge"
-        app:iconTint="@color/black" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvAppbarTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/btnBack"
-        android:layout_toEndOf="@id/btnBack"
-        android:text="@string/txt_appbar"
-        android:textColor="@color/colorSecondary"
-        android:textSize="@dimen/text_regular_2x"
-        android:textStyle="bold" />
-
-    <com.padc.customviewassigment.views.components.RoundedCornerImageView
-        android:id="@+id/btnProgress"
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_medium_3"
-        android:gravity="center"
-        android:text="@string/txt_progress"
-        android:textColor="@color/white"
-        app:cornerRadius="@dimen/margin_xlarge"
-        app:roundedColor="@color/colorAccent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvCreateTitle"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnBack"
-        android:layout_alignStart="@id/btnBack"
-        android:text="@string/text_create_additional_pages"
-        android:textColor="@color/colorTextPrimary"
-        android:textSize="@dimen/text_heading_2x"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvCurrentDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvCreateTitle"
-        android:layout_alignStart="@id/btnBack"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:text="03 days | Dec 18,2019"
-        android:textColor="@color/colorTextSecondary"
-        android:textSize="@dimen/text_regular_2x" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvProfileList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/btnBack"
-        android:layout_below="@id/tvCurrentDate"/>
-
-    <com.padc.customviewassigment.views.components.CircularProgressBar
-        android:id="@+id/simpleProgressBar"
-        android:layout_below="@id/tvCreateTitle"
-        android:layout_marginEnd="@dimen/margin_medium_2"
-        android:layout_alignParentEnd="true"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:outerColor="@color/outerColorProgress"
-        app:innerColor="@color/white"
-        app:progressColor="@color/colorProgress"
-        app:progressText="85"/>
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/simpleProgressBar"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/margin_medium_2"
-        android:background="@drawable/background_left_rounded_corner">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTask"
-            android:layout_marginTop="@dimen/margin_medium_2"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/text_tasks"
-            android:layout_alignLeft="@id/vpProgressCard"
-            android:textColor="@color/colorTextSecondary"
-            android:textSize="@dimen/text_regular_2x"/>
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            app:icon="@drawable/ic_baseline_keyboard_arrow_left_black_24dp"
+            app:iconSize="@dimen/margin_xlarge"
+            app:iconTint="@color/black" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvShowInDays"
-            android:layout_marginTop="@dimen/margin_medium_2"
+            android:id="@+id/tvAppbarTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/vpProgressCard"
-            android:text="@string/text_show_in_days"
-            android:layout_alignLeft="@id/vpProgressCard"
-            android:textColor="@color/colorTextSecondary"
-            android:textSize="@dimen/text_regular_2x"/>
+            android:layout_alignBaseline="@id/btnBack"
+            android:layout_toEndOf="@id/btnBack"
+            android:text="@string/txt_appbar"
+            android:textColor="@color/colorSecondary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
 
-        <include
-            android:id="@+id/vpProgressCard"
-            android:layout_below="@id/tvTask"
+        <com.padc.customviewassigment.views.components.RoundedCornerImageView
+            android:id="@+id/btnProgress"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:gravity="center"
+            android:text="@string/txt_progress"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/margin_xlarge"
+            app:roundedColor="@color/colorAccent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreateTitle"
             android:layout_width="300dp"
-            android:layout_height="match_parent"
-            layout="@layout/viewpod_progress_card"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBack"
+            android:layout_alignStart="@id/btnBack"
+            android:text="@string/text_create_additional_pages"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCreateTitle"
+            android:layout_alignStart="@id/btnBack"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="03 days | Dec 18,2019"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfileList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCurrentDate"
+            android:layout_alignStart="@id/btnBack" />
+
+        <com.padc.customviewassigment.views.components.CircularProgressBar
+            android:id="@+id/simpleProgressBar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tvCreateTitle"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="@dimen/margin_medium_2"
-            android:layout_marginLeft="@dimen/margin_medium_2"
-            android:layout_marginTop="@dimen/margin_medium_2"/>
+            app:innerColor="@color/white"
+            app:outerColor="@color/outerColorProgress"
+            app:progressColor="@color/colorProgress"
+            app:progressText="85" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/simpleProgressBar"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:background="@drawable/background_left_rounded_corner">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vpProgressCard"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/text_tasks"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvShowInDays"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/vpProgressCard"
+                android:layout_alignEnd="@id/vpProgressCard"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/text_show_in_days"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <include
+                android:id="@+id/vpProgressCard"
+                layout="@layout/viewpod_progress_card"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvTask"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2" />
+        </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout>
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/activity_profile_detail_list"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
