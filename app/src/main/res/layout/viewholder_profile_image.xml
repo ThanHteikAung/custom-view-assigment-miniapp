@@ -5,10 +5,12 @@
     android:layout_height="wrap_content">
 
     <com.padc.customviewassigment.views.components.RoundedProfileImageView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:id="@+id/ivProfile"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:src="@drawable/profile_img"
-        app:strokeColor="@color/colorAccent"
+        app:strokeColor="@color/white"
+        android:scaleType="centerCrop"
         />
 
 </RelativeLayout>

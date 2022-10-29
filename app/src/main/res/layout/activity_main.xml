@@ -62,18 +62,20 @@
         android:textColor="@color/colorTextSecondary"
         android:textSize="@dimen/text_regular_2x" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfileList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/btnBack"
+        android:layout_below="@id/tvCurrentDate"/>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tvCurrentDate"
+        android:layout_below="@id/rvProfileList"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/margin_medium_2"
         android:background="@drawable/background_left_rounded_corner">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProfileList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
     </FrameLayout>
 </RelativeLayout>
