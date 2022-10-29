@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.padc.customviewassigment.views.viewpods.ProgressCardViewpod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    android:background="@drawable/background_rounded_corner"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCardProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_progress"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginLeft="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvCardProgress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:text="#Design"
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="@dimen/margin_medium_3" />
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvContactTitle"
+        android:layout_alignLeft="@id/tvCardProgress"
+        android:layout_below="@id/tvCardProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact page"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_regular_3x"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvContactTitle"
+        android:layout_alignLeft="@id/tvCardProgress"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:paddingTop="@dimen/margin_small"
+        android:background="@drawable/ic_baseline_textsms_black_24dp"
+        android:backgroundTint="@color/colorTextSecondary"/>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMessageNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:layout_toEndOf="@id/ivMessage"
+        android:layout_below="@id/tvContactTitle"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textSize="@dimen/text_regular_3x"
+        android:layout_alignTop="@id/ivMessage"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAttach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tvMessageNo"
+        android:background="@drawable/ic_baseline_attach_file_black_24dp"
+        android:backgroundTint="@color/colorTextSecondary"
+        android:layout_below="@id/tvContactTitle"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:paddingTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAttachFileNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:layout_toEndOf="@id/ivAttach"
+        android:layout_below="@id/tvContactTitle"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:textSize="@dimen/text_regular_3x"
+        android:layout_alignTop="@id/ivMessage"/>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N-163"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold"
+        android:layout_toStartOf="@id/ivProfileCard"
+        android:layout_alignTop="@id/tvAttachFileNo"
+        android:layout_marginRight="@dimen/margin_medium_2"/>
+
+    <com.padc.customviewassigment.views.components.RoundedProfileImageView
+        android:id="@+id/ivProfileCard"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignRight="@id/tvDesign"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_img"
+        app:strokeColor="@color/white" />
+
+</com.padc.customviewassigment.views.viewpods.ProgressCardViewpod>

@@ -3,4 +3,6 @@
     <string name="txt_appbar">OMP Dashboard</string>
     <string name="txt_progress">In progress</string>
     <string name="text_create_additional_pages">Create additional pages</string>
+    <string name="text_tasks">Tasks</string>
+    <string name="text_show_in_days">Show in days</string>
 </resources>

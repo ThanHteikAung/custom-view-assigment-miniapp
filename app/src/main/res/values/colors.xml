@@ -16,4 +16,6 @@
     <color name="colorTextPrimary">#0A1F4B</color>
     <color name="colorTextSecondary">#C2C9D5</color>
     <color name="colorSecondaryLight">#F0F4FD</color>
+    <color name="outerColorProgress">#FACEC2</color>
+    <color name="colorProgress">#F35B2E</color>
 </resources>
