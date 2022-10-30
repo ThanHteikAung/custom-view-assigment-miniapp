@@ -1,5 +1,7 @@
 package com.padc.customviewassigment.activities
 
+import android.content.Context
+import android.content.Intent
 import android.graphics.Rect
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +30,12 @@ class MainActivity : AppCompatActivity(), MainView {
     //Presenter
     private lateinit var mPresenter: MainPresenter
 
+    companion object{
+        fun newIntent(context:Context):Intent{
+            return Intent(context,MainActivity::class.java)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -48,7 +56,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     //setup Profile Image circle list
     private fun setUpRecyclerProfileList() {
-        mProfileAdapter = ProfileAdapter()
+        mProfileAdapter = ProfileAdapter(mPresenter)
         mMyItemDecoration = MyItemDecoration()
         rvProfileList.addItemDecoration(mMyItemDecoration) //Overlap Profile Image
         rvProfileList.adapter = mProfileAdapter
@@ -87,6 +95,10 @@ class MainActivity : AppCompatActivity(), MainView {
             }
         }
 
+    }
+
+    override fun navigateToCreateNewTask() {
+        startActivity(CreateNewTaskActivity.newIntent(this))
     }
 
     //Tab Layout set up Name

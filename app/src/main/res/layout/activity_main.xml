@@ -41,7 +41,7 @@
             android:gravity="center"
             android:text="@string/txt_progress"
             android:textColor="@color/white"
-            app:cornerRadius="@dimen/margin_xlarge"
+            app:cornerRadius="@dimen/margin_medium"
             app:roundedColor="@color/colorAccent" />
 
         <androidx.appcompat.widget.AppCompatTextView

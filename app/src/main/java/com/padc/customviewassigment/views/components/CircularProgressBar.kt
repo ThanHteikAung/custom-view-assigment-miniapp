@@ -3,6 +3,7 @@ package com.padc.customviewassigment.views.components
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.View
 import androidx.core.content.withStyledAttributes
 import com.padc.customviewassigment.R
@@ -74,9 +75,10 @@ class CircularProgressBar @JvmOverloads constructor(
         canvas?.drawCircle(size / 2f, size / 2f, innerCircleRadius, paint)
 
         //Set progress text
-        paint.textSize = size / 10f
+        paint.textSize = width / 3f
+        paint.color = Color.BLACK
         val strProgressText = "$progressText%"
-        val lan = strProgressText.length * (size / 10f)/4
-        canvas?.drawText(strProgressText, radius - lan, size / 2f, paint)
+        val lan = strProgressText.length * (width / 3f) / 4f
+        canvas?.drawText(strProgressText, radius - lan, size / 2f + Gravity.CENTER.toFloat(), paint)
     }
 }

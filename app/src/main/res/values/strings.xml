@@ -6,4 +6,8 @@
     <string name="text_tasks">Tasks</string>
     <string name="text_show_in_days">Show in days</string>
     <string name="txt_message">Message</string>
+    <string name="txt_new_task_title">A Create New Task</string>
+    <string name="txt_project_name">PROJECT NAME</string>
+    <string name="txt_create_task">Create Task</string>
+    <string name="txt_storage">168KB</string>
 </resources>
